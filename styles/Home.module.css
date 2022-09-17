@@ -5,3 +5,7 @@
 .main-title {
   padding-left: 1rem;
 }
+
+.link-list {
+  list-style: none;
+}

@@ -15,6 +15,25 @@ a {
   box-sizing: border-box;
 }
 
+.global__content-container {
+  background-color: #1d1e21;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1rem 8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .global__content-container {
+    margin: 1rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .global__content-container {
+    margin: 1rem 2rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
