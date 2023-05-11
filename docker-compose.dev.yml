@@ -1,0 +1,14 @@
+services:
+  next-app:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    environment:
+      ENV_VARIABLE: ${ENV_VARIABLE}
+      NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
+    volumes:
+      - ./app:/app/app
+      - ./public:/app/public
+    ports:
+      - 3000:3000
