@@ -7,26 +7,17 @@ import remarkMath from "remark-math";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeKatex from "rehype-katex";
 
+import { formattedDate } from "@/utils/text-utils"; 
+
 import hljs from 'highlight.js/lib/core'
 import julia from '@/utils/julia'
 
 hljs.registerLanguage('julia', julia)
 
-function formattedDate(d = new Date) {
-    let month = String(d.getMonth() + 1);
-    let day = String(d.getDate());
-    const year = String(d.getFullYear());
-
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-
-    return `${month}/${day}/${year}`;
-}
-
 async function TutorialPage(props: any) {
     const { code, frontmatter } = await bundleMDX({
-        file: `@/data/pages/tutorials/${props.params.slug}.mdx`,
-        cwd: `@/data/components/`,
+        file: `/app/data/pages/tutorials/${props.params.slug}.mdx`,
+        cwd: `/app/data/components/`,
         mdxOptions(options) {
             options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkMath]
             options.rehypePlugins = [...(options.rehypePlugins ?? []), rehypeHighlight, rehypeKatex]
@@ -39,7 +30,6 @@ async function TutorialPage(props: any) {
     return <WrapperMain>
         <h1 className="text-3xl">{frontmatter.title}</h1>
         <p>{frontmatter.description}</p>
-        {/* <pre><code className="hljs language-js">This will be highlighted.</code></pre> */}
         <p>Published: {formattedDate(frontmatter.published)}</p>
         <Component />
     </WrapperMain>;
