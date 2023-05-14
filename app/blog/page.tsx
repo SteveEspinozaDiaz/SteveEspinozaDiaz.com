@@ -10,7 +10,7 @@ import Link from "next/link";
 import ComputerDesktopSolidIcon from "@/public/assets/vector/icons/ComputerDesktopSolid";
 import WrapperMainTitle from "@/data/components/layout/WrapperMainTitle";
 
-export const getMetadata = (): any => {
+const getMetadata = (): any => {
   const pageFiles = fs.readdirSync("./data/pages/tutorials")
   const mdxPages = pageFiles.filter((file) => file.endsWith(".mdx"))
 
