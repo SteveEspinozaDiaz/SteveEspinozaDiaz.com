@@ -4,8 +4,13 @@ import Link from 'next/link'
 import Miffy from '/public/assets/images/web/Miffy-Profile-Alt.png'
 import Image from 'next/image';
 
-export default function Home() {
+import HomeSolidIcon from '@/public/assets/vector/icons/HomeSolid';
+import PencilSolidIcon from '@/public/assets/vector/icons/PencilSolid';
+import WrenchScrewdriverSolidIcon from '@/public/assets/vector/icons/WrenchScrewdriverSolid';
+import PaintBrushSolidIcon from '@/public/assets/vector/icons/PaintBrushSolid';
+import ComputerDesktopSolidIcon from '@/public/assets/vector/icons/ComputerDesktopSolid';
 
+export default function Home() {
   return (
     <WrapperMain>
       <div className='flex justify-center'>
@@ -21,11 +26,36 @@ export default function Home() {
       </div>
       </div>
       <ul className='flex flex-col'>
-        <Link href="/about"><div className='flex items-center bg-stone-800 pl-8 mb-2 h-16 rounded-sm font-medium hover:bg-stone-700 duration-200'>About</div></Link>
-        <Link href="/notes"><div className='flex items-center bg-stone-800 pl-8 mb-2 h-16 rounded-sm font-medium hover:bg-stone-700 duration-200'>Notes</div></Link>
-        <Link href="/projects"><div className='flex items-center bg-stone-800 pl-8 mb-2 h-16 rounded-sm font-medium hover:bg-stone-700 duration-200'>Projects</div></Link>
-        <Link href="/art"><div className='flex items-center bg-stone-800 pl-8 mb-2 h-16 rounded-sm font-medium hover:bg-stone-700 duration-200'>Art</div></Link>
-        <Link href="/blog"><div className='flex items-center bg-stone-800 pl-8 h-16 rounded-sm font-medium hover:bg-stone-700 duration-200'>Blog</div></Link>
+        <Link href="/about">
+          <div className='flex text-lg items-center bg-stone-800 pl-8 mb-2 h-20 rounded-sm font-medium hover:bg-stone-700 duration-200'>
+            <HomeSolidIcon className="w-6 h-6 mr-3" />
+            <p>About</p>
+          </div>
+        </Link>
+        <Link href="/notes">
+          <div className='flex text-lg items-center bg-stone-800 pl-8 mb-2 h-20 rounded-sm font-medium hover:bg-stone-700 duration-200'>
+            <PencilSolidIcon className="w-6 h-6 mr-3"/>
+            <p>Notes</p>
+          </div>
+        </Link>
+        <Link href="/projects">
+          <div className='flex text-lg items-center bg-stone-800 pl-8 mb-2 h-20 rounded-sm font-medium hover:bg-stone-700 duration-200'>
+            <WrenchScrewdriverSolidIcon className="w-6 h-6 mr-3"/>
+            <p>Projects</p>
+          </div>
+        </Link>
+        <Link href="/art">
+          <div className='flex text-lg items-center bg-stone-800 pl-8 mb-2 h-20 rounded-sm font-medium hover:bg-stone-700 duration-200'>
+            <PaintBrushSolidIcon className="w-6 h-6 mr-3"/>
+            <p>Art</p>
+          </div>
+        </Link>
+        <Link href="/blog">
+          <div className='flex text-lg items-center bg-stone-800 pl-8 h-20 rounded-sm font-medium hover:bg-stone-700 duration-200'>
+            <ComputerDesktopSolidIcon className="w-6 h-6 mr-3"/>
+            <p>Blog</p>
+          </div>
+        </Link>
       </ul>
     </WrapperMain>
   )

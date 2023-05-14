@@ -1,9 +1,12 @@
 import WrapperMain from "@/data/components/layout/WrapperMain";
 import React from "react";
 
+import PaintBrushSolidIcon from "@/public/assets/vector/icons/PaintBrushSolid";
+import WrapperMainTitle from "@/data/components/layout/WrapperMainTitle";
+
 function ArtPage() {
   return (<WrapperMain>
-    <h1 className="mb-6">Art Page</h1>
+    <WrapperMainTitle title="Art" Icon={PaintBrushSolidIcon}/>
     <h2>Coming Soon...</h2>
   </WrapperMain>);
 }
