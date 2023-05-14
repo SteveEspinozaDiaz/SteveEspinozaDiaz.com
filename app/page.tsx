@@ -1,7 +1,7 @@
 import WrapperMain from '@/data/components/layout/WrapperMain'
 import Link from 'next/link'
 
-import Miffy from '/app/public/assets/images/web/Miffy-Profile-Alt.png'
+import Miffy from '@/public/assets/images/web/Miffy-Profile-Alt.png'
 import Image from 'next/image';
 
 export default function Home() {

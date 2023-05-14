@@ -25,8 +25,8 @@ function formattedDate(d = new Date) {
 
 async function TutorialPage(props: any) {
     const { code, frontmatter } = await bundleMDX({
-        file: `/app/data/pages/tutorials/${props.params.slug}.mdx`,
-        cwd: `/app/data/components/`,
+        file: `@/data/pages/tutorials/${props.params.slug}.mdx`,
+        cwd: `@/data/components/`,
         mdxOptions(options) {
             options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkMath]
             options.rehypePlugins = [...(options.rehypePlugins ?? []), rehypeHighlight, rehypeKatex]
