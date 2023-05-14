@@ -9,17 +9,17 @@ import WrapperMainTitle from "@/data/components/layout/WrapperMainTitle";
 
 function BlogPage() {
 
-  const slugs = getSlugs('/app/data/pages/tutorials')
-  const slugComponents = slugs.map((slug) => {return(
-  <div>
-    <Link href={`/blog/tutorials/${slug}`}>{slug}</Link>
-  </div>
-  )})
+  // const slugs = getSlugs('/app/data/pages/tutorials')
+  // const slugComponents = slugs.map((slug) => {return(
+  // <div>
+  //   <Link href={`/blog/tutorials/${slug}`}>{slug}</Link>
+  // </div>
+  // )})
 
   return (<WrapperMain>
     <WrapperMainTitle title="Blog" Icon={ComputerDesktopSolidIcon}/>
     <h2>Coming Soon...</h2>
-    {slugComponents}
+    {/* {slugComponents} */}
   </WrapperMain>);
 }
 
