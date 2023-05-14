@@ -18,6 +18,7 @@ COPY next.config.js .
 COPY tsconfig.json .
 COPY tailwind.config.js .
 COPY postcss.config.js .
+COPY .vscode ./.vscode
 
 # Start Next.js in development mode based on the preferred package manager
 CMD \

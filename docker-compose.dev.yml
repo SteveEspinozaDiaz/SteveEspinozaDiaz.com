@@ -9,6 +9,8 @@ services:
       NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
     volumes:
       - ./app:/app/app
+      - ./data:/app/data
       - ./public:/app/public
+      - ./utils:/app/utils
     ports:
       - 3000:3000
