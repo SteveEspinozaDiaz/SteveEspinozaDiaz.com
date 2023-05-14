@@ -3,7 +3,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import Miffy from "@/public/assets/images/web/Miffy-Profile-Alt.png"
+import Miffy from "/public/assets/images/web/Miffy-Profile-Alt.png"
 
 function HeaderMain() {
   return (<header className="flex w-full items-center justify-between px-6 h-12 bg-black">

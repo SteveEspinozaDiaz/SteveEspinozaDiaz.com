@@ -8,7 +8,7 @@ import rehypeHighlight from "rehype-highlight/lib";
 import rehypeKatex from "rehype-katex";
 
 import hljs from 'highlight.js/lib/core'
-import julia from '/app/public/lang/code/julia'
+import julia from '@/utils/julia'
 
 hljs.registerLanguage('julia', julia)
 
