@@ -6,12 +6,12 @@ import Link from "next/link";
 
 function BlogPage() {
 
-  const slugs = getSlugs('/app/data/pages/tutorials')
-  const slugComponents = slugs.map((slug) => {return(
-  <div>
-    <Link href={`/blog/tutorials/${slug}`}>{slug}</Link>
-  </div>
-  )})
+  // const slugs = getSlugs('/app/data/pages/tutorials')
+  // const slugComponents = slugs.map((slug) => {return(
+  // <div>
+  //   <Link href={`/blog/tutorials/${slug}`}>{slug}</Link>
+  // </div>
+  // )})
 
   return <WrapperMain>
     <h1 className="mb-6">Blog Page</h1>
