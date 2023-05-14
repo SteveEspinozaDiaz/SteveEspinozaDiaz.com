@@ -7,15 +7,14 @@ import Link from "next/link";
 import ComputerDesktopSolidIcon from "@/public/assets/vector/icons/ComputerDesktopSolid";
 import WrapperMainTitle from "@/data/components/layout/WrapperMainTitle";
 
-function BlogPage() {
+function BlogPage() {  
 
-  const metaData = getMetadata('/app/data/pages/tutorials/')
+  const metaData = getMetadata("../app/data/pages/tutorials/")
   const postComponents = metaData.map((metaDatum: any, index: number) => (
     <div key={`tutorial-${metaDatum.slug}-${index}`}>
       <Link href={`/blog/tutorials/${metaDatum.slug}`}>{metaDatum.title}</Link>
     </div>
   ))
-
 
   return (<WrapperMain>
     <WrapperMainTitle title="Blog" Icon={ComputerDesktopSolidIcon}/>
