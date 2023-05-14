@@ -16,7 +16,7 @@ export default function Home() {
         <h1>Welcome!</h1>
         <div className='flex flex-col items-center my-4 text-center'>
           <p>My name is Steve. I am an undergraduate physics student at the University of Massachusetts Lowell.</p>
-          <p>This is my personal website where I share my notes, projects, art.</p>
+          <p>This is my personal website where I share my notes, projects, and art.</p>
         </div>
       </div>
       </div>
